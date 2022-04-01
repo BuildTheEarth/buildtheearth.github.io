@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" language="javascript" src="json.js"></script>
+    <script>
+        const NAMES = {
+          white: "#FFFFFF",
+          darkgray: "#898D90",
+          lightgray: "#D4D7D9",
+          black: "#000000",
+          lightpink: "#FF99AA",
+          red: "#FF4500",
+          orange: "#FFA800",
+          brown: "#9C6926",
+          yellow: "#FFD635",
+          lightgreen: "#7EED56",
+          green: "#00A368",
+          cyan: "#51E9F4",
+          grayblue:"#2450A4",
+          blue: "#3690EA",
+          pink: "#B44AC0",
+          purple: "#811E9F",
+        };
+      function changeIt() {
+        
+
+        const jsonD =
+          jsonData[
+            "(" +
+              document
+                .getElementById("mytext")
+                .value.replace("(", "")
+                .replace(")", "")
+                .split(",")
+                .map((e) => e.trim())
+                .join(", ") +
+              ")"
+          ];
+
+        const color = NAMES[jsonD];
+
+        document.getElementById("p1").innerHTML = jsonD;
+
+        document.getElementById("color").style.backgroundColor = color;
+        console.log(color);
+      }
+    </script>
+  </head>
+  <style>
+    
+  </style>
+  <body>
+    <div class="container">
+      <p id="p2">Coords split by comma, eg 250, 288</p>
+      <p id="p3">undefined means it does not or is empty</p>
+      <input type="button" value="convert" onClick="changeIt()" />
+      <br /><input type="text" id="mytext" />
+      <div id="createTextbox"></div>
+      <p id="p1">None</p>
+      <div id="color"></div>
+    </div>
+  </body>
+</html>

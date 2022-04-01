@@ -46,11 +46,6 @@
           .replace(")", "")
           .replace(" ", "")
           .split(",")[1];
-        if (x < 323 || x > 351 || y < 476 || y > 491) {
-          document.getElementById("mytext").value = "";
-          document.getElementById("mytext").placeholder = "Invalid coordinates";
-          return;
-        }
         const jsonD = jsonData[`(${x}, ${y})`];
 
         const color = NAMES[jsonD];

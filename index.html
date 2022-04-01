@@ -3,12 +3,21 @@
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png">
     <link rel="stylesheet" href="style.css" />
     <script type="text/javascript" language="javascript" src="json.js"></script>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:title" content="Build The Earth r/place">
+    <meta property="og:description" content="A tool to help find the right colors for the Build The Earth r/place art.">
+    <meta property="og:image" content="https://buildtheearth.github.io/icon.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="Build The Earth r/place">
+    <meta property="twitter:description" content="A tool to help find the right colors for the Build The Earth r/place art.">
+    <meta property="twitter:image" content="https://buildtheearth.github.io/icon.png">
     <title>BTE r/place</title>
     <script>
       var x = 323;
@@ -83,35 +92,38 @@
             ? "pink"
             : jsonD == "purple"
             ? "purple"
-            : jsonD;
+            : jsonD == undefined
+            ? "Invalid coords"
+            : jsonD
 
         document.getElementById("body").style.backgroundColor = color;
+        document.getElementById("colorPreview").style.backgroundColor = color;
         console.log(`(${x}, ${y})`);
       }
       function openLoc() {
+        if (jsonD == undefined) {
+          return;
+        } else {
         window.open(`https://www.reddit.com/r/place/?cx=${x}&cy=${y}&px=8`);
+        }
       }
     </script>
   </head>
   <style></style>
   <body id="body">
     <div class="container">
-      <div id="box">
-        <img src="img6.png" />
+      <div style="padding-bottom: 32px" id="box">
+        <img src="icon.png" />
         <h1>Build The Earth r/place</h1>
-        <p id="p2">Coords split by comma, eg 50, 600</p>
+        <p id="p2">Enter coords split by comma, eg 50, 600</p>
         <p id="p3">The image goes from (50,600) to (82,632)</p>
         <br /><input type="text" id="mytext" />
         <div id="createTextbox"></div>
-        <input type="button" value="Convert" onClick="changeIt()" />
-        <input
-          type="button"
-          value="Open Location"
-          onclick="openLoc()"
-          id="b2"
-        />
+        <input type="button" value="Get Color" onClick="changeIt()" />
+        <input type="button" value="Open Location" onclick="openLoc()" id="b2"/>
       </div>
-      <p id="p1" style="padding-top: 100px">None</p>
+      <div class="colorPreview" id="colorPreview"></div>
+      <p style="padding-top: 8px" id="p1">None</p>
     </div>
   </body>
 </html>

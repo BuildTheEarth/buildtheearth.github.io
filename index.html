@@ -20,6 +20,7 @@
     <meta property="twitter:image" content="https://buildtheearth.github.io/icon.png">
     <title>BTE r/place</title>
     <script>
+      let jsonD;
       var x = 323;
       var y = 476;
       const NAMES = {
@@ -55,7 +56,7 @@
           .replace(")", "")
           .replace(" ", "")
           .split(",")[1];
-        const jsonD = jsonData[`(${x}, ${y})`];
+        jsonD = jsonData[`(${x}, ${y})`];
 
         const color = NAMES[jsonD];
 

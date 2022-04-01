@@ -1,6 +1,5 @@
 * {
     font-family: "Roboto", sans-serif;
-    width: 40vw;
     padding: 0;
     margin: 0;
     text-align: center;
@@ -18,7 +17,7 @@ img {
     padding-bottom: 20px;
 }
 h1 {
-    padding-bottom: 120px;
+    padding-bottom: 100px;
 }
 input,
 button {
@@ -45,8 +44,18 @@ input[type="button"]:hover {
     background-color: white;
     border-radius: 16px;
     padding: 16px;
+    display: inline-block;
     -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.52);
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.52);
+    height: 90%;
+    width: 40vw;
+}
+.colorPreview {
+    height: 35px;
+    width: 45px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 3px;
 }
 a {
     text-decoration: underline;
@@ -56,3 +65,11 @@ a {
 #b2 {
     background-color: rgb(245, 245, 245);
 }
+@media screen and (max-width: 830px) {
+    .container {
+        width: 70vw;
+    }
+    h1 {
+        padding-bottom: 60px;
+    }
+  }

@@ -14,7 +14,7 @@ body {
 img {
     width: 64px;
     height: 64px;
-    margin:auto;
+    margin: auto;
     padding-bottom: 20px;
 }
 h1 {
@@ -30,9 +30,24 @@ button {
     border-radius: 4px;
     box-sizing: border-box;
 }
+
+input[type="button"] {
+    background-color: rgb(148, 148, 148);
+}
+input[type="button"]:hover {
+    width: 61%;
+}
 .container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+a {
+    text-decoration: underline;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+#b2 {
+    background-color: rgb(245, 245, 245);
 }

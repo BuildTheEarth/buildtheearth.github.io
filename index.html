@@ -11,6 +11,8 @@
     <script type="text/javascript" language="javascript" src="json.js"></script>
     <title>BTE r/place</title>
     <script>
+     var x = 0;
+     var y = 0;
       const NAMES = {
         white: "#FFFFFF",
         darkgray: "#898D90",
@@ -30,12 +32,12 @@
         purple: "#811E9F",
       };
       function changeIt() {
-        const x = document
+         x = document
           .getElementById("mytext")
           .value.replace("(", "")
           .replace(")", "")
           .split(",")[0];
-        const y = document
+         y = document
           .getElementById("mytext")
           .value.replace("(", "")
           .replace(")", "")
@@ -54,6 +56,9 @@
         document.getElementById("body").style.backgroundColor = color;
         console.log(color);
       }
+      function openLoc() {
+        window.open(`https://www.reddit.com/r/place/?cx=${x}&cy=${y}&px=8`);
+      }
     </script>
   </head>
   <style></style>
@@ -62,11 +67,12 @@
       <img src="img6.png" />
       <h1>Build The Earth r/place</h1>
       <p id="p2">Coords split by comma, eg 250, 288</p>
-      <p id="p3">The image goes from (320 , ) to ( , )</p>
-      <input type="button" value="convert" onClick="changeIt()" />
+      <p id="p3">The image goes from (320, 460) to (384, 524)</p>
       <br /><input type="text" id="mytext" />
       <div id="createTextbox"></div>
-      <p id="p1">None</p>
+      <input type="button" value="Convert" onClick="changeIt()" />
+      <input type="button" value="Open Location" onclick="openLoc()" id="b2"/>
+      <p id="p1" style="padding-top:200px">None</p>
     </div>
   </body>
 </html>

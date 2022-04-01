@@ -26,11 +26,11 @@ pixels = im.load()
 
 final = {}
 
-startX = 320
-startY = 460
+startX = 298
+startY = 476
 
-for i in range(64):
-    for j in range(64):
+for i in range(32):
+    for j in range(32):
         try:
             if pixels[i, j][3] != 0: final[str((i + startX, j + startY))] = str(colors[(pixels[i, j][0], pixels[i, j][1], pixels[i, j][2])])
         except:

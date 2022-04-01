@@ -11,8 +11,8 @@
     <script type="text/javascript" language="javascript" src="json.js"></script>
     <title>BTE r/place</title>
     <script>
-     var x = 0;
-     var y = 0;
+      var x = 323;
+      var y = 476;
       const NAMES = {
         white: "#FFFFFF",
         darkgray: "#898D90",
@@ -32,29 +32,32 @@
         purple: "#811E9F",
       };
       function changeIt() {
-         x = document
+        console.log(jsonData);
+        x = document
           .getElementById("mytext")
           .value.replace("(", "")
           .replace(")", "")
+          .replace(" ", "")
           .split(",")[0];
-         y = document
+        y = document
           .getElementById("mytext")
           .value.replace("(", "")
           .replace(")", "")
+          .replace(" ", "")
           .split(",")[1];
-        if (x < 320 || x > 384 || y < 460 || y > 524) {
+        if (x < 323 || x > 351 || y < 476 || y > 491) {
           document.getElementById("mytext").value = "";
           document.getElementById("mytext").placeholder = "Invalid coordinates";
           return;
         }
-        const jsonD = jsonData["(" + x + ", " + y + ")"];
+        const jsonD = jsonData[`(${x}, ${y})`];
 
         const color = NAMES[jsonD];
 
         document.getElementById("p1").innerHTML = jsonD;
 
         document.getElementById("body").style.backgroundColor = color;
-        console.log(color);
+        console.log(`(${x}, ${y})`);
       }
       function openLoc() {
         window.open(`https://www.reddit.com/r/place/?cx=${x}&cy=${y}&px=8`);
@@ -64,15 +67,22 @@
   <style></style>
   <body id="body">
     <div class="container">
-      <img src="img6.png" />
-      <h1>Build The Earth r/place</h1>
-      <p id="p2">Coords split by comma, eg 250, 288</p>
-      <p id="p3">The image goes from (320, 460) to (384, 524)</p>
-      <br /><input type="text" id="mytext" />
-      <div id="createTextbox"></div>
-      <input type="button" value="Convert" onClick="changeIt()" />
-      <input type="button" value="Open Location" onclick="openLoc()" id="b2"/>
-      <p id="p1" style="padding-top:200px">None</p>
+      <div id="box">
+        <img src="img6.png" />
+        <h1>Build The Earth r/place</h1>
+        <p id="p2">Coords split by comma, eg 323, 476</p>
+        <p id="p3">The image goes from (323, 476) to (351, 478)</p>
+        <br /><input type="text" id="mytext" />
+        <div id="createTextbox"></div>
+        <input type="button" value="Convert" onClick="changeIt()" />
+        <input
+          type="button"
+          value="Open Location"
+          onclick="openLoc()"
+          id="b2"
+        />
+      </div>
+      <p id="p1" style="padding-top: 200px">None</p>
     </div>
   </body>
 </html>

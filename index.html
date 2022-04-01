@@ -50,7 +50,40 @@
 
         const color = NAMES[jsonD];
 
-        document.getElementById("p1").innerHTML = jsonD;
+        document.getElementById("p1").innerHTML =
+          jsonD == "grayblue"
+            ? "dark blue"
+            : jsonD == "lightpink"
+            ? "light pink"
+            : jsonD == "lightgreen"
+            ? "light green"
+            : jsonD == "lightgray"
+            ? "light gray"
+            : jsonD == "white"
+            ? "white"
+            : jsonD == "darkgray"
+            ? "dark gray"
+            : jsonD == "black"
+            ? "black"
+            : jsonD == "red"
+            ? "red"
+            : jsonD == "orange"
+            ? "orange"
+            : jsonD == "brown"
+            ? "brown"
+            : jsonD == "yellow"
+            ? "yellow"
+            : jsonD == "green"
+            ? "green"
+            : jsonD == "cyan"
+            ? "cyan"
+            : jsonD == "blue"
+            ? "blue"
+            : jsonD == "pink"
+            ? "pink"
+            : jsonD == "purple"
+            ? "purple"
+            : jsonD;
 
         document.getElementById("body").style.backgroundColor = color;
         console.log(`(${x}, ${y})`);
@@ -67,7 +100,7 @@
         <img src="img6.png" />
         <h1>Build The Earth r/place</h1>
         <p id="p2">Coords split by comma, eg 50, 600</p>
-        <p id="p3">The image goes from (50,600) to  (82,632)</p>
+        <p id="p3">The image goes from (50,600) to (82,632)</p>
         <br /><input type="text" id="mytext" />
         <div id="createTextbox"></div>
         <input type="button" value="Convert" onClick="changeIt()" />

@@ -3,8 +3,10 @@ import json
 
 colors = {(255, 255, 255): 'white',
 (228, 228, 228): 'lightgray',
+(190, 190, 190): 'lightgray',
 (136, 136, 136): 'darkgray',
 (34, 34, 34): 'black',
+(0, 0, 0): 'black',
 (255, 167, 209): 'lightpink',
 (229, 0, 0): 'red',
 (229, 149, 0): 'orange',
@@ -26,8 +28,8 @@ pixels = im.load()
 
 final = {}
 
-startX = 298
-startY = 476
+startX = 50
+startY = 600
 
 for i in range(32):
     for j in range(32):

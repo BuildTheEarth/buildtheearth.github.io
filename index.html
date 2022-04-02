@@ -3,26 +3,41 @@
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="icon.png">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="icon.png" />
     <link rel="stylesheet" href="style.css" />
     <script type="text/javascript" language="javascript" src="json.js"></script>
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://metatags.io/">
-    <meta property="og:title" content="Build The Earth r/place">
-    <meta property="og:description" content="A tool to help find the right colors for the Build The Earth r/place art.">
-    <meta property="og:image" content="https://buildtheearth.github.io/icon.png">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://metatags.io/">
-    <meta property="twitter:title" content="Build The Earth r/place">
-    <meta property="twitter:description" content="A tool to help find the right colors for the Build The Earth r/place art.">
-    <meta property="twitter:image" content="https://buildtheearth.github.io/icon.png">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metatags.io/" />
+    <meta property="og:title" content="Build The Earth r/place" />
+    <meta
+      property="og:description"
+      content="A tool to help find the right colors for the Build The Earth r/place art."
+    />
+    <meta
+      property="og:image"
+      content="https://buildtheearth.github.io/icon.png"
+    />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://metatags.io/" />
+    <meta property="twitter:title" content="Build The Earth r/place" />
+    <meta
+      property="twitter:description"
+      content="A tool to help find the right colors for the Build The Earth r/place art."
+    />
+    <meta
+      property="twitter:image"
+      content="https://buildtheearth.github.io/icon.png"
+    />
     <title>BTE r/place</title>
     <script>
       let jsonD;
-      var x = 323;
-      var y = 476;
+      var x = 50;
+      var y = 600;
       const NAMES = {
         white: "#FFFFFF",
         darkgray: "#898D90",
@@ -36,13 +51,14 @@
         lightgreen: "#7EED56",
         green: "#00A368",
         cyan: "#51E9F4",
-        grayblue: "#2450A4",
-        blue: "#3690EA",
+        blue: "#2450A4",
+        grayblue: "#3690EA",
         pink: "#B44AC0",
         purple: "#811E9F",
       };
       function changeIt() {
         document.getElementById("body").style.backgroundColor = "#fff";
+        document.getElementById("colorPreview").style.backgroundColor = "#fff";
         console.log(jsonData);
         x = document
           .getElementById("mytext")
@@ -62,7 +78,7 @@
 
         document.getElementById("p1").innerHTML =
           jsonD == "grayblue"
-            ? "dark blue"
+            ? "blue"
             : jsonD == "lightpink"
             ? "light pink"
             : jsonD == "lightgreen"
@@ -88,25 +104,21 @@
             : jsonD == "cyan"
             ? "cyan"
             : jsonD == "blue"
-            ? "blue"
+            ? "dark blue"
             : jsonD == "pink"
             ? "pink"
             : jsonD == "purple"
             ? "purple"
             : jsonD == undefined
             ? "Invalid coords"
-            : jsonD
+            : jsonD;
 
         document.getElementById("body").style.backgroundColor = color;
         document.getElementById("colorPreview").style.backgroundColor = color;
         console.log(`(${x}, ${y})`);
       }
       function openLoc() {
-        if (jsonD == undefined) {
-          return;
-        } else {
         window.open(`https://www.reddit.com/r/place/?cx=${x}&cy=${y}&px=8`);
-        }
       }
     </script>
   </head>
@@ -121,10 +133,15 @@
         <br /><input type="text" id="mytext" />
         <div id="createTextbox"></div>
         <input type="button" value="Get Color" onClick="changeIt()" />
-        <input type="button" value="Open Location" onclick="openLoc()" id="b2"/>
+        <input
+          type="button"
+          value="Open Location"
+          onclick="openLoc()"
+          id="b2"
+        />
       </div>
       <div class="colorPreview" id="colorPreview"></div>
-      <p style="padding-top: 8px" id="p1">None</p>
+      <p style="padding-top: 8px" id="p1">none</p>
     </div>
   </body>
 </html>

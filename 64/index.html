@@ -8,7 +8,7 @@
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="icon.png" />
+    <link rel="icon" href="https://buildtheearth.github.io/64/icon.png" />
     <link rel="stylesheet" href="style.css" />
     <script type="text/javascript" language="javascript" src="json.js"></script>
     <meta property="og:type" content="website" />
@@ -20,7 +20,7 @@
     />
     <meta
       property="og:image"
-      content="https://buildtheearth.github.io/icon.png"
+      content="https://buildtheearth.github.io/64/icon.png"
     />
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://metatags.io/" />
@@ -31,7 +31,7 @@
     />
     <meta
       property="twitter:image"
-      content="https://buildtheearth.github.io/icon.png"
+      content="https://buildtheearth.github.io/64/icon.png"
     />
     <title>BTE r/place</title>
     <script>
@@ -62,6 +62,8 @@
         grayblue: "#3690EA",
         pink: "#B44AC0",
         purple: "#811E9F",
+        darkgreen: "#00a368",
+        darkblue: "#2450a5"
       };
       function changeIt() {
         document.getElementById("body").style.backgroundColor = "#fff";
@@ -85,7 +87,7 @@
 
         document.getElementById("p1").innerHTML =
           jsonD == "grayblue"
-            ? "blue"
+            ? "light blue"
             : jsonD == "lightpink"
             ? "light pink"
             : jsonD == "lightgreen"
@@ -108,9 +110,13 @@
             ? "yellow"
             : jsonD == "green"
             ? "green"
+            : jsonD == "darkgreen"
+            ? "dark green"
             : jsonD == "cyan"
             ? "cyan"
             : jsonD == "blue"
+            ? "blue"
+            : jsonD == "darkblue"
             ? "dark blue"
             : jsonD == "pink"
             ? "pink"
@@ -136,7 +142,7 @@
         <img src="icon.png" id="logo" />
         <h1>Build The Earth r/place 64x variant</h1>
         <p id="p2">Enter coords split by comma, eg 1378,759</p>
-        <p id="p3">The image goes from (1378,759) to (1.442,823)</p>
+        <p id="p3">The image goes from (1363, 743) to (1389, 765)</p>
         <br /><input type="text" id="mytext" />
         <div id="createTextbox"></div>
         <input type="button" value="Get Color" onClick="changeIt()" />

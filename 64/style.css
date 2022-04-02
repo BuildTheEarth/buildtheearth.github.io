@@ -1,0 +1,99 @@
+* {
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+html,
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+#logo {
+    width: 64px;
+    height: 64px;
+    margin: auto;
+    padding-bottom: 20px;
+}
+h1 {
+    padding-bottom: 100px;
+}
+h2 {
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+h3 {
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+input,
+button {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(0, 0, 0);
+    -webkit-border-radius: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+}
+
+input[type="button"] {
+    background-color: rgb(148, 148, 148);
+}
+input[type="button"]:hover {
+    width: 61%;
+}
+.container {
+    background-color: white;
+    border-radius: 16px;
+    padding: 16px;
+    display: inline-block;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.52);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.52);
+    height: 76vh;
+    width: 40vw;
+    margin: 12vh auto 12vh auto;
+}
+.colorPreview {
+    height: 35px;
+    width: 45px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 3px;
+}
+a {
+    text-decoration: underline;
+    cursor: pointer;
+    color: rgb(84, 95, 156);
+}
+#b2 {
+    background-color: rgb(245, 245, 245);
+}
+#p4 {
+    margin-top: 64px;
+}
+
+.info {
+    background-color: white;
+    border-radius: 16px;
+    padding: 16px;
+    display: inline-block;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.52);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.52);
+    width: 90vw;
+    margin: 5vh auto 3vh auto;
+    padding-bottom: 70px;
+}
+
+@media screen and (max-width: 830px) {
+    .container {
+        width: 70vw;
+    }
+    h1 {
+        padding-bottom: 60px;
+    }
+}

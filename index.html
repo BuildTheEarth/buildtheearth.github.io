@@ -35,6 +35,13 @@
     />
     <title>BTE r/place</title>
     <script>
+      const checkSubmit = (e) => {
+        if (e.keyCode == 13) {
+          changeIt();
+        }
+      };
+      document.addEventListener("keydown", checkSubmit);
+
       let jsonD;
       var x = 50;
       var y = 600;
@@ -126,7 +133,7 @@
   <body id="body">
     <div class="container">
       <div style="padding-bottom: 32px" id="box">
-        <img src="icon.png" />
+        <img src="icon.png" id="logo" />
         <h1>Build The Earth r/place</h1>
         <p id="p2">Enter coords split by comma, eg 50, 600</p>
         <p id="p3">The image goes from (50,600) to (82,632)</p>
@@ -142,6 +149,70 @@
       </div>
       <div class="colorPreview" id="colorPreview"></div>
       <p style="padding-top: 8px" id="p1">none</p>
+      <div id="p4">
+        <p><a href="#info">More Information</a></p>
+        <svg
+          fill="none"
+          viewBox="0 0 24 24"
+          height="24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            xmlns="http://www.w3.org/2000/svg"
+            d="M5.29289 9.29289C5.68342 8.90237 6.31658 8.90237 6.70711 9.29289L12 14.5858L17.2929 9.29289C17.6834 8.90237 18.3166 8.90237 18.7071 9.29289C19.0976 9.68342 19.0976 10.3166 18.7071 10.7071L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L5.29289 10.7071C4.90237 10.3166 4.90237 9.68342 5.29289 9.29289Z"
+            fill="#0D0D0D"
+          ></path>
+        </svg>
+      </div>
+    </div>
+    <div class="info" id="info">
+      <h2>General Guidelines</h2>
+      <p>
+        The event is until April 4rth, we anticipate the drawing will be griefed
+        multiple times until then so don't give up! <br />Try to focus on
+        preserving the shape of the earth and the letters. THIS IS THE MOST
+        IMPORTANT TASK!<br />
+        Small details like lone pixels of a wrong shade are not as important as
+        the overall correctness of the image.
+      </p>
+      <h2>Coordinates</h2>
+      <p>
+        The logo is situated at 50, 600, remember to use this website to get the
+        proper colors to use. It's normal for the corners to return undefined
+        because of the circular shape. Use the reference image in that case.
+      </p>
+      <h2>Propper blue Shades</h2>
+      <img
+        src="https://cdn.discordapp.com/attachments/959528192312504340/959528975288377414/unknown.png"
+        width="300px"
+        height="300px"
+      />
+      <h2>Alliances</h2>
+      <h3>Cookie Clicker</h3>
+      <p>
+        Please do not grief their logo,
+        <a
+          href="https://docs.google.com/spreadsheets/d/1dfUa9CngHIcnpg4pTPBmyakPTGUVhIybiiu-ECAD65w/edit#gid=0"
+          >this</a
+        >
+        is the agreed overlap.
+      </p>
+      <h3>University of Florida (UF)</h3>
+      <p>
+        We will be protecting each other's logos and they've allowed us to
+        change the 1 quarter of our border to simulate an overlap and gain a
+        better symmetry. <br />⚠️ IMPORTANT ⚠️<br />Do not touch the F!! We are
+        leaving 1 white pixel of space between us and them.
+      </p>
+      <h2>Griefing</h2>
+      <p>Please dm the griefers something like this message so that they know the letters are supposed to be there!</p>
+      <p style="background-color:rgb(194, 194, 194);border-radius: 8px;padding:12px;width:min-content;margin:auto;">
+        Hello, the BTE text on the r/place globe is not grief, this is being
+        organized by the BuildTheEarth project heres the image and the website,
+        https://buildtheearth.github.io/#info, and heres the image,
+        https://media.discordapp.net/attachments/691046143483707452/959488572140957736/unknown.png?width=564&height=562
+      </p>
     </div>
   </body>
 </html>

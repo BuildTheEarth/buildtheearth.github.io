@@ -28,8 +28,8 @@ pixels = im.load()
 
 final = {}
 
-startX = 298
-startY = 476
+startX = 50
+startY = 600
 
 for i in range(32):
     for j in range(32):

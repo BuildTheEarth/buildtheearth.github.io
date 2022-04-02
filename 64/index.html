@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="https://buildtheearth.github.io/64/icon.png" />
     <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" language="javascript" src="json.js"></script>
+    <script type="text/javascript" language="javascript" src="https://buildtheearth.github.io/64/json.js"></script>
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://metatags.io/" />
     <meta property="og:title" content="Build The Earth r/place" />
@@ -43,8 +43,8 @@
       document.addEventListener("keydown", checkSubmit);
 
       let jsonD;
-      var x = 50;
-      var y = 600;
+      var x = 1378;
+      var y = 759;
       const NAMES = {
         white: "#FFFFFF",
         darkgray: "#898D90",
@@ -139,11 +139,18 @@
   <body id="body">
     <div class="container">
       <div style="padding-bottom: 32px" id="box">
-        <img src="icon.png" id="logo" />
+        <img src="../icon.png" id="logo" />
         <h1>Build The Earth r/place 64x variant</h1>
+<<<<<<< HEAD
         <p id="p2">Enter coords split by comma, eg 1378,759</p>
         <p id="p3">The image goes from (1363, 743) to (1389, 765)</p>
         <br /><input type="text" id="mytext" />
+=======
+        <p id="p2">Enter coords split by comma, eg  1378,759</p>
+        <p id="p3">The image goes from (1347,728) to (  1410,791)</p>
+        <p id="p3">THE CENTER IS 1378,759 MAKE A BLUE BLOB, DO NOT USE THIS</p>
+        <br /><input type="text" id="mytext" disabled="true" />
+>>>>>>> 1f3d62f8902b18b50c3fd5eddf003766d67d2af4
         <div id="createTextbox"></div>
         <input type="button" value="Get Color" onClick="changeIt()" />
         <input
